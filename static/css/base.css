@@ -1,3 +1,4 @@
+/* -------------------------------- Custom Styles */
 html {
     height: 100%;
 }
@@ -190,7 +191,7 @@ html {
     content: "";
     width: 255px;
     height: 217px;
-    background-image: url('../images/dots-yellow.svg');
+    background-image: url('/media/dots-yellow.svg');
     background-repeat: no-repeat;
     background-size: contain;
     transform: translate(-40%, -40%);
@@ -248,7 +249,7 @@ html {
     content: "";
     width: 255px;
     height: 217px;
-    background-image: url('../images/dots-green.svg');
+    background-image: url('/media/dots-green.svg');
     background-size: contain;
     background-repeat: no-repeat;
     transform: translate(-40%, -40%);
@@ -350,66 +351,13 @@ html {
     z-index: -1;
 }
 
-/* .hero {
-    background-color: #3b5d50;
-    font-family: 'Lato'; 
-    color: #ffffff;
-    padding: 0;
-    margin: 0 
-}
 
-@media (min-width: 990px) and (max-width: 1200px) { 
-    .hero {
-        padding: calc(4rem - 30px) 0 4rem 0;
-    }
+body {
+    background: #f8f9fa; 
+    color: #000; 
+    font-family: 'Lato';
+    width: 100%;
 }
-/* @media (min-width: 1024px) { 
-} */
-
-/* .hero .intro-header {
-    position: relative;
-    z-index: 4;
-}
-@media (min-width: 300px) { 
-    .hero .intro-header {
-        margin-top: 50px;
-    }
-}
-
-.hero h1 {
-    font-weight: 700;
-    color: #ffffff; 
-    margin-bottom: 30px;
-}
-@media (min-width: 1440px) { 
-    .hero h1 {
-        font-size: 54px;
-    }
-}
-.hero p {
-    color: rgba(255, 255, 255, 0.5); 
-    margin-bottom: 30px;
-}
-.hero .hero-img-wrap {
-    position: relative;
-}
-
-.hero .hero-img-wrap:after {
-    content: "";
-    position: absolute;
-    width: 255px;
-    height: 217px;
-    background-image: url('/media/dots-light.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    right: -100px;
-    top: 0px;
-}
-@media (min-width: 1200px) { 
-    .hero .hero-img-wrap:after {
-        top: -40px;
-    }
-} */ */
 
 
 /* from Bulma */
@@ -580,9 +528,9 @@ input[name='q']::placeholder {
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
-  .container {
+  /* .container {
     max-width: 80%;
-  }
+  } */
 }
 
 /* Allauth form formatting */
@@ -672,14 +620,16 @@ input[name='q']::placeholder {
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
-    .fixed-top-desktop-only {
+    /* .fixed-top-desktop-only {
         position: fixed;
         top: 0;
         right: 0;
         left: 0;
         z-index: 1030;
+    } */
+    .text-lg-right {
+        text-align: right !important;
     }
-
     .header-container {
         padding-top: 164px;
     }
@@ -688,13 +638,13 @@ input[name='q']::placeholder {
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
-    .header-container {
+    /* .header-container {
         padding-top: 116px;
-    }
+    } */
 
-    body {
+    /* body {
         height: calc(100vh - 116px);
-    }
+    } */
     .display-4.logo-font.text-black {
         font-size: 2rem;
     }
@@ -727,14 +677,14 @@ input[name='q']::placeholder {
         width: 50%;
     }
 
-    body {
-    background: url('/media/couch.png') no-repeat center center;
-    background-size: cover;
+    /* body {
+    /* background: url('/media/couch.png') no-repeat center center;
+    background-size: cover; */
     /* height: calc(100vh - 164px); */
-    height: calc(100vh - 44px);
-    color: #555;
+    /* height: calc(100vh - 44px); */
+    /* color: #555;
     font-family: 'Lato';
-}
+    } */ */
     .shop-by-category {
         margin-top: -70px
     }
@@ -745,3 +695,5 @@ input[name='q']::placeholder {
     margin: 0;
     }
 }
+
+
