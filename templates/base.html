@@ -44,13 +44,13 @@
             <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
                 <!--------------------Logo Name------------------------>
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                    <a href="" class="nav-link main-logo-link">
+                    <a href="{% url 'home' %}" class="nav-link main-logo-link">
                         <h2 class="logo-font text-black my-0 ms-5"><strong>Bulky</strong>Boutique</h2>
                     </a>
                 </div>
                 <!--------------------Search Our Site ------------------------>
                 <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
-                    <form method="GET" action="#">
+                    <form method="GET" action="{% url 'products' %}">
                         <div class="input-group w-100">
                             <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
                             <div class="input-group-append">
@@ -109,7 +109,7 @@
             </div>
             <!----------------navbar------------------------->
             <div class="row bg-white">
-                <nav class="navbar navbar-expand-lg navbar-light w-100">
+                <nav class="navbar navbar-expand-lg navbar-light w-100"  style="margin-bottom: 0px;">
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -158,7 +158,7 @@
                     <div class="intro-header">
                         <h1>Modern Interior <span class="d-block">Design Studio</span></h1>
                         <p class="mb-4">Welcome to our store. We have a wide variety of products for you to choose from.</span></p>
-                        <a href="#" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop
+                        <a href="{% url 'products' %}" class="shop-now-button btn btn-lg rounded-0 text-uppercase py-3">Shop
                             Now</a>
                     </div>
                 </div>
@@ -175,117 +175,116 @@
 <!-- Start Product Section -->
 <div class="product-section">
     <div class="container">
+
         <!-- Shop by category -->
-        <div class="col-md-12 col-lg-3 mb-5 mb-lg-0">
-            <h4 class="mb-4 section-title"><strong>SHOP BY CATEGORY</strong></h4>
-        </div>
+        <h4 class="mb-4 section-title"><strong>SHOP BY CATEGORY</strong></h4>
         <div class="row">
-
-            <!-- Start Column 1 -->
-            <div class="col-xs-6 col-sm-6 col-md-4 col-xl-3 mb-5">
-                <a class="product-item" href="cart.html">
-                    <img src="/media/product-1.png" class="img-fluid product-thumbnail">
-                    <h3 class="product-title">New Arrivals</h3>
-
-                    <span class="icon-cross">
-                        <img src="/media/cross.svg" class="img-fluid">
-                    </span>
-                </a>
-            </div> 
-            <!-- End Column 1 -->
-
-            <!-- Start Column 2 -->
-            <div class="col-xs-6 col-sm-6 col-md-4 col-xl-3 mb-5">
-                <a class="product-item" href="cart.html">
-                    <img src="/media/product-1.png" class="img-fluid product-thumbnail">
-                    <h3 class="product-title">Nordic Chair</h3>
-
-                    <span class="icon-cross">
-                        <img src="/media/cross.svg" class="img-fluid">
-                    </span>
-                </a>
-            </div> 
-            <!-- End Column 2 -->
-
-            <!-- Start Column 3 -->
-            <div class="col-xs-6 col-sm-6 col-md-4 col-xl-3 mb-5">
-                <a class="product-item" href="cart.html">
-                    <img src="/media/product-2.png" class="img-fluid product-thumbnail">
-                    <h3 class="product-title">Kruzo Aero Chair</h3>
-
-                    <span class="icon-cross">
-                        <img src="/media/cross.svg" class="img-fluid">
-                    </span>
-                </a>
+            <div class="row">
+                <!-- Start Column 1 -->
+                <div class="col-6 col-md-4 col-lg-3 mb-5">
+                    <a class="product-item" href="cart.html">
+                        <img src="/media/product-1.png" class="img-fluid product-thumbnail">
+                        <h3 class="product-title">New Arrivals</h3>
+    
+                        <span class="icon-cross">
+                            <img src="/media/cross.svg" class="img-fluid">
+                        </span>
+                    </a>
+                </div> 
+                <!-- End Column 1 -->
+    
+                <!-- Start Column 2 -->
+                <div class="col-6 col-md-4 col-lg-3 mb-5">
+                    <a class="product-item" href="cart.html">
+                        <img src="/media/product-1.png" class="img-fluid product-thumbnail">
+                        <h3 class="product-title">Nordic Chair</h3>
+    
+                        <span class="icon-cross">
+                            <img src="/media/cross.svg" class="img-fluid">
+                        </span>
+                    </a>
+                </div> 
+                <!-- End Column 2 -->
+    
+                <!-- Start Column 3 -->
+                <div class="col-6 col-md-4 col-lg-3 mb-5">
+                    <a class="product-item" href="cart.html">
+                        <img src="/media/product-2.png" class="img-fluid product-thumbnail">
+                        <h3 class="product-title">Kruzo Aero Chair</h3>
+    
+                        <span class="icon-cross">
+                            <img src="/media/cross.svg" class="img-fluid">
+                        </span>
+                    </a>
+                </div>
+                <!-- End Column 3 -->
+    
+                <!-- Start Column 4 -->
+                <div class="col-6 col-md-4 col-lg-3 mb-5">
+                    <a class="product-item" href="cart.html">
+                        <img src="/media/product-3.png" class="img-fluid product-thumbnail">
+                        <h3 class="product-title">Ergonomic Chair</h3>
+    
+                        <span class="icon-cross">
+                            <img src="/media/cross.svg" class="img-fluid">
+                        </span>
+                    </a>
+                </div>
+                <!-- End Column 4 -->
+    
+                <!-- Start Column 5 -->
+                <div class="col-6 col-md-4 col-lg-3 mb-5">
+                    <a class="product-item" href="cart.html">
+                        <img src="/media/product-1.png" class="img-fluid product-thumbnail">
+                        <h3 class="product-title">Nordic Chair</h3>
+                
+                        <span class="icon-cross">
+                            <img src="/media/cross.svg" class="img-fluid">
+                        </span>
+                    </a>
+                </div> 
+                <!-- End Column 5 -->
+                
+                <!-- Start Column 6 -->
+                <div class="col-6 col-md-4 col-lg-3 mb-5">
+                    <a class="product-item" href="cart.html">
+                        <img src="/media/product-1.png" class="img-fluid product-thumbnail">
+                        <h3 class="product-title">Nordic Chair</h3>
+                
+                        <span class="icon-cross">
+                            <img src="/media/cross.svg" class="img-fluid">
+                        </span>
+                    </a>
+                </div> 
+                <!-- End Column 6 -->
+    
+                <!-- Start Column 7 -->
+                <div class="col-6 col-md-4 col-lg-3 mb-5">
+                    <a class="product-item" href="cart.html">
+                        <img src="/media/product-2.png" class="img-fluid product-thumbnail">
+                        <h3 class="product-title">Kruzo Aero Chair</h3>
+    
+                        <span class="icon-cross">
+                            <img src="/media/cross.svg" class="img-fluid">
+                        </span>
+                    </a>
+                </div>
+                <!-- End Column 7 -->
+    
+                <!-- Start Column 8 -->
+                <div class="col-6 col-md-4 col-lg-3 mb-5">
+                    <a class="product-item" href="cart.html">
+                        <img src="/media/product-3.png" class="img-fluid product-thumbnail">
+                        <h3 class="product-title">Ergonomic Chair</h3>
+    
+                        <span class="icon-cross">
+                            <img src="/media/cross.svg" class="img-fluid">
+                        </span>
+                    </a>
+                </div>
+                <!-- End Column 8 -->
+    
             </div>
-            <!-- End Column 3 -->
-
-            <!-- Start Column 4 -->
-            <div class="col-xs-6 col-sm-6 col-md-4 col-xl-3 mb-5">
-                <a class="product-item" href="cart.html">
-                    <img src="/media/product-3.png" class="img-fluid product-thumbnail">
-                    <h3 class="product-title">Ergonomic Chair</h3>
-
-                    <span class="icon-cross">
-                        <img src="/media/cross.svg" class="img-fluid">
-                    </span>
-                </a>
-            </div>
-            <!-- End Column 4 -->
-
-            <!-- Start Column 5 -->
-            <div class="col-xs-6 col-sm-6 col-md-4 col-xl-3 mb-5">
-                <a class="product-item" href="cart.html">
-                    <img src="/media/product-1.png" class="img-fluid product-thumbnail">
-                    <h3 class="product-title">Nordic Chair</h3>
-
-                    <span class="icon-cross">
-                        <img src="/media/cross.svg" class="img-fluid">
-                    </span>
-                </a>
-            </div> 
-            <!-- End Column 5 -->
-
-            <!-- Start Column 6 -->
-            <div class="col-xs-6 col-sm-6 col-md-4 col-xl-3 mb-5">
-                <a class="product-item" href="cart.html">
-                    <img src="/media/product-1.png" class="img-fluid product-thumbnail">
-                    <h3 class="product-title">Nordic Chair</h3>
-
-                    <span class="icon-cross">
-                        <img src="/media/cross.svg" class="img-fluid">
-                    </span>
-                </a>
-            </div> 
-            <!-- End Column 6 -->
-
-            <!-- Start Column 7 -->
-            <div class="col-xs-6 col-sm-6 col-md-4 col-xl-3 mb-5">
-                <a class="product-item" href="cart.html">
-                    <img src="/media/product-2.png" class="img-fluid product-thumbnail">
-                    <h3 class="product-title">Kruzo Aero Chair</h3>
-
-                    <span class="icon-cross">
-                        <img src="/media/cross.svg" class="img-fluid">
-                    </span>
-                </a>
-            </div>
-            <!-- End Column 7 -->
-
-            <!-- Start Column 8 -->
-            <div class="col-xs-6 col-sm-6 col-md-4 col-xl-3 mb-5">
-                <a class="product-item" href="cart.html">
-                    <img src="/media/product-3.png" class="img-fluid product-thumbnail">
-                    <h3 class="product-title">Ergonomic Chair</h3>
-
-                    <span class="icon-cross">
-                        <img src="/media/cross.svg" class="img-fluid">
-                    </span>
-                </a>
-            </div>
-            <!-- End Column 8 -->
-
-        </div>
     </div>
 </div>
 <!-- End Product Section -->
@@ -294,7 +293,7 @@
 <div class="why-choose-section">
     <div class="container">
         <div class="row justify-content-between">
-            <div class="col-lg-6">
+            <div class="col-lg-6 why-choose-section-icons">
                 <h2 class="section-title">Why Choose Us</h2>
                 <p>Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique.</p>
 

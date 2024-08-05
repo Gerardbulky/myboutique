@@ -6,15 +6,16 @@ html {
     background: #3b5d50; /* Replace $primary with its actual value */
     padding: calc(4rem - 30px) 0 0rem 0;
     font-family: 'Lato';
+
 }
-@media (min-width: 768px) { /* Replace $md with its actual value */
+@media (max-width: 768px) { /* Replace $md with its actual value */
     .hero {
-        padding: calc(4rem - 30px) 0 4rem 0;
+        padding: calc(4rem - 30px) 0 0rem 0;
     }
 }
 @media (min-width: 1024px) { /* Replace $lg with its actual value */
     .hero {
-        padding: calc(8rem - 30px) 0 8rem 0;
+        padding: calc(8rem - 30px) 0 11rem 0;
     }
 }
 .hero .intro-header {
@@ -48,7 +49,7 @@ html {
     top: 0px;
     right: 0px;
     z-index: 2;
-    max-width: 780px;
+    /* max-width: 780px; */
     left: -20px;
 }
 @media (min-width: 768px) { /* Replace $md with its actual value */
@@ -75,7 +76,7 @@ html {
 .hero .hero-img-wrap:after {
     content: "";
     position: absolute;
-    width: 255px;
+    /* width: 255px; */
     height: 217px;
     background-image: url('/media/dots-light.svg');
     background-size: contain;
@@ -100,7 +101,7 @@ html {
     text-decoration: none;
     display: block;
     position: relative;
-    padding-bottom: 50px;
+    padding-bottom: 10px;
     cursor: pointer;
 }
 
@@ -132,7 +133,7 @@ html {
     width: 35px;
     height: 35px;
     display: inline-block;
-    background: #333; /* Replace $dark with its actual value */
+    background: #333;
     bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
@@ -156,7 +157,7 @@ html {
     right: 0;
     position: absolute;
     content: "";
-    background: #f9f9f9; /* Replace $light with its actual value */
+    background: #eceaea; /* Replace $light with its actual value */
     height: 0%;
     z-index: -1;
     border-radius: 10px;
@@ -178,9 +179,7 @@ html {
 }
 
 /* Why Choose Us Section */
-.why-choose-section {
-    padding: 7rem 0;
-}
+
 
 .why-choose-section .img-wrap {
     position: relative;
@@ -620,31 +619,38 @@ input[name='q']::placeholder {
 
 /* fixed top navbar only on medium and up */
 @media (min-width: 992px) {
-    /* .fixed-top-desktop-only {
+    .fixed-top-desktop-only {
         position: fixed;
         top: 0;
         right: 0;
         left: 0;
         z-index: 1030;
-    } */
+    }
     .text-lg-right {
         text-align: right !important;
     }
     .header-container {
         padding-top: 164px;
     }
-    
+    #delivery-banner h4 {
+        margin-top: .5rem;
+        margin-bottom: .5rem;
+    }
+    .why-choose-section {
+        padding-top: 10rem;
+        padding-bottom: 7rem;
+    }
 }
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
-    /* .header-container {
-        padding-top: 116px;
-    } */
+    .header-container {
+        padding-top: 90px;
+    }
 
-    /* body {
+    body {
         height: calc(100vh - 116px);
-    } */
+    }
     .display-4.logo-font.text-black {
         font-size: 2rem;
     }
@@ -660,7 +666,11 @@ input[name='q']::placeholder {
     }
     #delivery-banner h4 {
         font-size: .9rem;
+        margin-top: .5rem;
+        margin-bottom: .5rem;
     }
+    
+
     .btn.btn-outline-black.rounded-0,
     .btn.btn-black.rounded-0 {
         padding: .375rem .375rem;
@@ -684,7 +694,7 @@ input[name='q']::placeholder {
     /* height: calc(100vh - 44px); */
     /* color: #555;
     font-family: 'Lato';
-    } */ */
+    } */ 
     .shop-by-category {
         margin-top: -70px
     }
@@ -694,6 +704,12 @@ input[name='q']::placeholder {
     float:left;
     margin: 0;
     }
+    
+    .why-choose-section {
+        padding: 3rem 0;
+    }
+    .why-choose-section .why-choose-section-icons {
+        margin-bottom: 60px;
+    }
+
 }
-
-
