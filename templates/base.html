@@ -91,7 +91,7 @@
                         </li>
                         <!----------------------------my accounts Total-------------------------->
                         <li class="list-inline-item">
-                            <a class="{% if grand_total %}text-info fw-bold{% else %}text-black{% endif %} nav-link" href="#">
+                            <a class="{% if grand_total %}text-info fw-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
                                 <div class="text-center">
                                     <div><i class="fas fa-shopping-bag fa-lg"></i></div>
                                     <p class="my-0">
@@ -136,9 +136,9 @@
                             {% include 'includes/toasts/toast_error.html' %}
                         {% elif level == 30 %}
                             {% include 'includes/toasts/toast_warning.html' %}
-                        {% elif level == 25 %}
-                            {% include 'includes/toasts/toast_success.html' %}
-                        {% else %}
+                        <!-- 
+                            include 'includes/toasts/toast_success.html
+                        -->
                             {% include 'includes/toasts/toast_info.html' %}
                         {% endif %}
                     {% endwith %}
