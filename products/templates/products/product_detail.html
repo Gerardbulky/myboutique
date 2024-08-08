@@ -65,9 +65,9 @@
                             <!------adding product sizing-->
                             {% with product.has_sizes as s %}
                             {% if s %}
-                                <div class="sol-12">
+                                <div class="col-12">
                                     <p><strong>Size:</strong></p>
-                                <select class="form-control rounded-0 w-100" name="product_size" id="id_product_size">    
+                                <select class="form-select rounded-0 w-50" name="product_size" id="id_product_size">    
                                     <option value="xs">XS</option>
                                     <option value="s">S</option>
                                     <option value="m" selected>M</option>
@@ -113,7 +113,21 @@
                                     </span>
                                     <span class="text-uppercase">Keep Shopping</span>
                                 </a>
-                                <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
+                                <!--Disable button if out of stock-->
+                                {% if product.quantity_left < 0 %}
+                                    <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5 disabled" value="Add to Bag">
+                                {% else%}
+                                    <input type="submit" class="btn btn-black rounded-0 text-uppercase mt-5" value="Add to Bag">
+                                    
+                                {% endif %}
+
+                                {% if product.is_available %}
+                                    {% if product.quantity_left == 1 %}
+                                        <p class="text-danger my-5">Only 1 left</p>
+                                    {% endif %}
+                                {% else %}
+                                    <p class="text-danger my-2">Out of Stock</p>
+                                {% endif %}
                             </div>
                             <input type="hidden" name="redirect_url" value="{{ request.path }}"> <!--hidden field submits this url to the view-->
                             {% endwith %}

@@ -10,7 +10,8 @@ from .models import Product, Category
 def all_products(request):
     """ A view to show all products, including sorting and search queries """
 
-    products = Product.objects.all()
+    # Only show products that are available (quantity_left > 0)
+    products = Product.objects.filter(quantity_left__gt=0)
     query = None
     categories = None
     sort = None

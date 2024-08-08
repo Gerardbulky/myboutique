@@ -28,6 +28,12 @@ class Product(models.Model):
     rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = models.ImageField(null=True, blank=True)
+    quantity_left = models.PositiveIntegerField(default=0)  # New field to manage product quantity
+    total_quantity = models.PositiveIntegerField(default=0)
 
+    @property
+    def is_available(self):
+        return self.quantity_left > 0
+    
     def __str__(self):
         return self.name

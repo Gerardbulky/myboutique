@@ -98,6 +98,11 @@
                                                 <a class="text-danger" href="#">Delete</a>
                                             </small>
                                         {% endif %}
+                                        <!--Disable button if out of stock-->
+                                        {% if product.is_available %}
+                                        {% else %}
+                                            <p class="text-danger">Out of Stock</p>
+                                        {% endif %}
                                     </div>
                                 </div>
                             </div>
